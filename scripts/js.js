@@ -17,15 +17,22 @@ $(document).ready(function(){
 			$(this).css({'box-shadow': 'inset 0 0 5px #000000'});
 		});
 		$(this).click(function(){
-			$(this).animate({height: $(window).height()/1.5-$('#header').height()});
+			$(this).animate({height: $(window).height()/1.4-$('#header').height()});
 			$(this).addClass('on');
 			$('#contentContainer div').each(function(){
 				if ($(this).attr('class') != 'on') {
-					$(this).animate({height: $(window).height()/4-$('#header').height()});
+					$(this).animate({height: ($(window).height()/4.7-$('#header').height())+"px"});
 				}
 			});
 			$(this).removeClass('on');
 		});
+	});
+	$('#header').click(function(){
+		$('#contentContainer div').each(function(){
+				if ($(this).attr('class') != 'on') {
+					$(this).animate({height: ($(window).height()/3-$('#header').height())+"px"});
+				}
+			});
 	});
 });
 
