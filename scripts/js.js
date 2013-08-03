@@ -18,7 +18,13 @@ $(document).ready(function(){
 		});
 		$(this).click(function(){
 			$(this).animate({height: $(window).height()/1.5-$('#header').height()});
-			
+			$(this).addClass('on');
+			$('#contentContainer div').each(function(){
+				if ($(this).attr('class') != 'on') {
+					$(this).animate({height: $(window).height()/4-$('#header').height()});
+				}
+			});
+			$(this).removeClass('on');
 		});
 	});
 });
