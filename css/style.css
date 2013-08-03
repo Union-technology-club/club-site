@@ -1,0 +1,57 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+	background-color: #2E2E2E;
+}
+#header {
+	display: block;
+	background-color: white;
+	height: 100px;
+	/*color: #46bbff;*/
+	color: black;
+	text-align: center;
+	box-shadow: inset 0 0 10px #000000;
+	font-size: 200%;
+}
+#header h1 {
+	padding-top: 5px;
+	text-shadow: #000 0px 1px 1px;
+}
+#container {
+	display: block;
+	margin: 0px;
+	padding: 0px;
+}
+#contentContainer {
+	display: block;
+	background-color: white;
+}
+#contentContainer div{
+	float: left;
+	text-shadow: #000 0px 1px 1px;
+	color: white;
+	box-shadow: inset 0 0 5px #000000;
+}
+#contentContainer div h2{
+	text-align:center;
+	font-size: 300%;
+}
+#home{
+	background-color: #2E2E2E;
+}
+#about{
+	background-color: #46bbff;
+}
+#signUp{
+	background-color: #ec209b;
+}
+#calendar{
+	background-color: #AADD14;
+}
+
