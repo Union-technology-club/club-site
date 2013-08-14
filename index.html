@@ -26,6 +26,30 @@
 			<div id="signUp">
 				<h2>Join Us</h2>
 				<section>
+					<form id="signUpForm" action="" method="post">
+						<fieldset>
+							<label for="firstname">First Name:<input id="firstname" type="text" name="firstname" placeholder="Enter Your First Name" required autofocus></label>
+							<label for="lastname">Last Name:<input id="lastname" type="text" name="lastname" placeholder="Enter Your Last Name" required></label>
+							<label for="email">Email:<input id="email" type="email" name="memberemail"></label>
+							<label for="unionid">Union ID:<input id="unionid" type="number" name="unionid" placeholder="xxxxxx" required></label>
+							<input type="submit" value="Join">
+						</fieldset>
+						<fieldset>
+							<p>Select "Yes" to put on one of our snazzy club shirts</p>
+							<ol>
+								<li> <input name="clubshirt" type="radio"> <label>Yes</label></li>
+								<li> <input name="clubshirt" type="radio"> <label>No</label></li>
+							</ol>
+							<div id="tshirt">
+								<ol>
+									<li> <input name="shirtsize" type="radio"> <label>Small</label></li>
+									<li> <input name="shirtsize" type="radio"> <label>Medium</label></li>
+									<li> <input name="shirtsize" type="radio"> <label>Large</label></li>
+									<li> <input name="shirtsize" type="radio"> <label>X-Large</label></li>
+								</ol>
+							</div>
+						</fieldset>
+					</form>
 				</section>
 			</div>
 			<div id="calendar">
