@@ -39,7 +39,7 @@ $(document).ready(function(){
 function resizePage() {
 	$viewportheight = $(window).height()
 	$viewportwidth = $(window).width()
-	$contentHeight = $(window).height()-$('#header').height()
+	$contentHeight = $(window).height()-$('#header').height()-10
 	$contentWidth = $(window).width()
 	$('#container').animate({height: $contentHeight+"px", width: $viewportwidth+"px"});
 	$('#home').animate({height: $contentHeight/4+"px", width: $viewportwidth+'px'});
