@@ -1,19 +1,78 @@
 ﻿html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    background-color: #eeeee4;
+    display: block;
+    font-family:arial;
+}
+
+.navBar {
+    position: fixed;
+    height: 60px;
+    width: 100%;
+    background-color: #1f1f1f;
+}
+
+.navBar div {
+    padding-top: 20px;
+    text-align:center;
+    display: inline-block;
+    color: #eeeee4;
+    width: 18.99%;
+}
+
+#homebox, #aboutbox, #joinbox, #calendarbox, .blankbox {
+    height: 20em;
+}
+#homebox {
+    background-color: #46bbff;
+}
+#aboutbox {
+    background-color: #67f230;
+}
+#joinbox {
+    background-color: #46bbff;
+}
+#calendarbox {
+    background-color: #67f230;
+}
+.body {
+    padding-top: 60px;
+}
+    /*    padding: .2em 1em;
+    margin-right: 5px;
+    color: #F7FFFF;
+    background-color: #34ABBF;
+    border-radius: 3px;
+}
+
+    li:hover {
+        color: #F7FFFF;
+        background-color: #AAD90F;
+    }*/
+
+
+/*html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
 }
 
 body {
-	background-color: #2E2E2E;
+	background-color: #eeeee4;
 }
 #header {
 	display: block;
 	background-color: white;
 	height: 100px;
-	/*color: #46bbff;*/
 	color: black;
 	text-align: center;
 	box-shadow: inset 0 0 10px #000000;
@@ -48,13 +107,21 @@ body {
 #about{
 	background-color: #46bbff;
 }
-#signUp{
+#join{
 	background-color: #ec209b;
 }
 #calendar{
 	background-color: #AADD14;
 }
-
+#home, #about, #join, #calendar {
+    opacity:100;
+}
+.navBar {
+    background-color: #0a0a0a;
+    opacity: 0.4;
+    height: 10%;
+    width: 100%;
+}
 
 .button {
     background-color: #AAD90F ;
@@ -106,4 +173,4 @@ label {
 }
 input {
     //background-color: #9DE40E;
-}
+}*/
