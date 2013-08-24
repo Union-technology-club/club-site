@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>T.T.C.</title>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="scripts/jquery.sidr.min.js"></script>
-		<script type="text/javascript" src="scripts/js.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-	<div id="container">
-		<div id="header">
-			<h1>Technology & Tabletop Club</h1>
-		</div>
-		<div id="contentContainer">
-			<div id="home">
-				<h2>Home</h2>
-				<section>
-				</section>
-			</div>
-			<div id="about">
-				<h2>About</h2>
-				<section>
-				</section>
-			</div>
-			<div id="signUp">
-				<h2>Join Us</h2>
-				<section>
-					<form id="signUpForm" action="" method="post">
-							<label for="name">Full Name:<input id="name" type="text" name="name" placeholder="Enter Your Full Name" required autofocus></label>
-							<label for="email">Email:<input id="email" type="email" name="memberemail" placeholder="Enter Your Email Address"></label>
-							<label for="unionid">Union ID:<input id="unionid" type="number" name="unionid" placeholder=" xxxxxx" required></label>
-					
-							<p>Select "Yes" to put on one of our snazzy club shirts</p>
-							<ul>
-								<li> <input name="clubshirt" type="radio"> <label>Yes</label></li>
-								<li> <input name="clubshirt" type="radio"> <label>No</label></li>
-							</ul>
-							<div id="tshirt">
-								<ul>
-									<li> <input name="shirtsize" type="radio"> <label>Small</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>Medium</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>Large</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>X-Large</label></li>
-								</ul>
-							</div>
-							<input type="submit" value="Join">
-							<p>We Welcome You with a grin and a nod!</p>
-					</form>
-				</section>
-			</div>
-			<div id="calendar">
-				<h2>Calendar</h2>
-				<section>
-				</section>
-			</div>
-		</div>
-		<div id="footer">
-		</div>
-	</div>
-	</body>
+<head>
+<title>T.T.C.</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<div id="container">
+<div id="header">
+<h1>Technology & Tabletop Community</h1>
+</div>
+<div id="contentContainer">
+<section id="home">
+<h2>Home</h2>
+<div class="content">
+</div>
+</section>
+<section id="about">
+<h2>About</h2>
+<div class="content">
+</div>
+</section>
+<section id="signUp">
+    <h2>Join Us</h2>
+    <div id="registration" class="content">
+        <form id="signUpForm" action="" method="get">
+            <div id="contactinfo">
+            <div class="field">
+                <label for="student_name">Your Name:</label><input id="student_name" type="text" name="student_name" placeholder="Example: John Smith" pattern="[^\d]+ [^\d]+" title="Please include your full name, such as 'John Smith'." required autofocus>
+            </div>
+            <div class="field">
+                <label for="student_email">Email:</label><input id="student_email" type="email" name="student_email" placeholder="Example: JSmith@gmail.com"  title="If you would like updates/alerts, leave us your email." required>
+            </div>
+            <div class="field">
+                <label for="student_id">Union ID:</label><input id="student_id" type="number" name="student_id" placeholder="Example: 123456" pattern="[\d]{6}" title="You can find your UC-ID number on your student ID card." required>
+            </div>
+            </div>
+        <div id="shirtinfo">
+           <div id="shirt_selection"> 
+                <p>Select "Yes" to put on one of our snazzy club shirts</p>
+                <ul>
+                    <li>  <label><input name="clubshirt" id="clubshirt-yes" type="radio" value="Yes" required>Yes</label></li>
+                    <li>  <label><input name="clubshirt" id="clubshirt-no" type="radio" value="No" required>No</label></li>
+                </ul>
+            </div>
+            <div id="tshirt">
+                <ul>
+                    <li>  <label><input name="shirtsize" id="shirtsize-small" type="radio" value="Small">Small</label></li>
+                    <li>  <label><input name="shirtsize" id="shirtsize-medium" type="radio" value="Medium">Medium</label></li>
+                    <li>  <label><input name="shirtsize" id="shirtsize-large" type="radio" value="Large">Large</label></li>
+                    <li>  <label><input name="shirtsize" id="shirtsize-x-large" type="radio" value="X-Large">X-Large</label></li>
+                </ul>
+            </div>
+        </div>
+            <div class="actions">
+            <button title="Submit!" type="submit">Let's Do This!</button>
+            </div>
+            <p id="welcome">We Welcome You with a grin and a nod!</p>
+        </form>
+     </div>
+</section>
+<section id="calendar">
+<h2>Calendar</h2>
+<div class="content">
+</div>
+</section>
+</div>
+<div id="footer">
+</div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="scripts/jquery.sidr.min.js"></script>
+<script src="scripts/js.js"></script> 
+<script src="scripts/js2.js"></script>     
+</body>
 </html>
