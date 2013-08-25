@@ -24,7 +24,7 @@
 <section id="signUp">
     <h2>Join Us</h2>
     <div id="registration" class="content">
-        <form id="signUpForm" action="" method="get">
+        <form id="signUpForm" action="submit.php" method="get">
             <div id="contactinfo">
             <div class="field">
                 <label for="student_name">Your Name:</label><input id="student_name" type="text" name="student_name" placeholder="Example: John Smith" pattern="[^\d]+ [^\d]+" title="Please include your full name, such as 'John Smith'." required autofocus>
@@ -34,6 +34,9 @@
             </div>
             <div class="field">
                 <label for="student_id">Union ID:</label><input id="student_id" type="number" name="student_id" placeholder="Example: 123456" pattern="[\d]{6}" title="You can find your UC-ID number on your student ID card." required>
+            </div>
+            <div class="field">
+                <label for="phoneNumber">Phone Number:</label><input id="student_id" type="number" name="phoneNumber" placeholder="Example: 1231234567" pattern="[\d]{10}" title="Your 10-digit number." required>
             </div>
             </div>
         <div id="shirtinfo">
