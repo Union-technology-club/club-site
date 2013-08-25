@@ -9,5 +9,6 @@
     });
 $(".actions").click(function() {
     $("#signUpForm").submit();
+    alert("SUBMITED");
     $("#welcome").show(drop, 400);
 });
