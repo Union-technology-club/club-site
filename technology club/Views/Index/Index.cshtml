@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>T.T.C.</title>
+    <link rel="stylesheet" href="~/Content/Index/style.css">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Technology & Tabletop Community</h1>
+        </div>
+        <div id="contentContainer">
+            <section id="home">
+                <h2>Home</h2>
+                <div class="content">
+                </div>
+            </section>
+            <section id="about">
+                <h2>About</h2>
+                <div class="content">
+                </div>
+        </section>
+        <section id="signUp">
+                <h2>Join Us</h2>
+                <div id="registration" class="content">
+                    @using (Ajax.BeginForm("CreateUser", new AjaxOptions())){
+                        <div id="contactinfo">
+                        <div class="field">
+                            <label for="student_name">Your Name:</label><input id="student_name" type="text" name="FullName" placeholder="Your Name" pattern="[^\d]+ [^\d]+" title="Please include your full name, such as 'John Smith'." required autofocus>
+                        </div>
+                        <div class="field">
+                            <label for="student_email">Email:</label><input id="student_email" type="email" name="Email" placeholder="Email"  title="If you would like updates/alerts, leave us your email." required>
+                        </div>
+                        <div class="field">
+                            <label for="student_id">Union ID:</label><input id="student_id" type="number" name="ID" placeholder="Union ID" pattern="[\d]{6}" title="You can find your UC-ID number on your student ID card." required>
+                        </div>
+                        <div class="field">
+                            <label for="phonenumber">Phone Number:</label><input id="phonenumber" type="number" name="PhoneNumber" placeholder="Phone Number" title="You can find your UC-ID number on your student ID card.">
+                        </div>
+                        </div>
+                    <div id="shirtinfo">
+                       <div id="shirt_selection"> 
+                            <p>Select "Yes" to put on one of our snazzy club shirts</p>
+                            <ul>
+                                <li>  <label><input name="clubshirt" id="clubshirt-yes" type="radio" value="Yes" required>Yes</label></li>
+                                <li>  <label><input name="clubshirt" id="clubshirt-no" type="radio" value="No" required>No</label></li>
+                            </ul>
+                        </div>
+                        <div id="tshirt">
+                            <ul>
+                                <li>  <label><input name="shirtsize" id="shirtsize-small" type="radio" value="2">Small</label></li>
+                                <li>  <label><input name="shirtsize" id="shirtsize-medium" type="radio" value="3">Medium</label></li>
+                                <li>  <label><input name="shirtsize" id="shirtsize-large" type="radio" value="4">Large</label></li>
+                                <li>  <label><input name="shirtsize" id="shirtsize-x-large" type="radio" value="5">X-Large</label></li>
+                            </ul>
+                        </div>
+                    </div>
+                        <div class="actions">
+                        <button title="Submit!" type="submit">Let's Do This!</button>
+                        </div>
+                        <p id="welcome">We Welcome You with a grin and a nod!</p>
+                    }
+            </div>
+        </section>
+        <section id="calendar">
+            <h2>Calendar</h2>
+            <div class="content">
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+    </div>
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src=""~/Scripts/jquery.sidr.min.js")"></script>
+<script src="~/Scripts/js.js"></script> 
+<script src="~/Scripts/js2.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>     
+</body>
+</html>
