@@ -8,5 +8,6 @@
         }
     });
 $(".actions").click(function() {
+    $("#signUpForm").submit();
     $("#welcome").show(drop, 400);
 });
