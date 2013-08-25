@@ -8,7 +8,7 @@ namespace TTC.Controllers.Database
 {
         public class Member
         {
-            MySqlConnection conn = new MySqlConnection("Server=127.0.0.1;Database=ttc_database;Uid=joel;Pwd=dontfearthereaper");
+            public MySqlConnection conn = null;
             public readonly String ID;
             public string FirstName;
             public string LastName;
@@ -29,10 +29,11 @@ namespace TTC.Controllers.Database
             private string oldStudentID;
             private bool oldWantsShirt;
 
-            public Member() { }
+            public Member(MySqlConnection conn) { this.conn = conn; }
 
-            public Member(int id)
+            public Member(MySqlConnection conn, int id)
             {
+                this.conn = conn;
                 if (id <= 0)
                 {
                     throw new Exception("ID has to be nonzero positive number");
@@ -76,57 +77,11 @@ namespace TTC.Controllers.Database
                 }
             
             }
-            public Member(string id)
-            {
-                if (Convert.ToDouble(id) <= 0)
-                {
-                    throw new Exception("ID has to be nonzero positive number");
-                }
-                try
-                {
-                    conn.Open();
-                    String query = "Select * From Members Where StudentID = " + id;
-                    MySqlCommand cmd = new MySqlCommand(query, conn);
-
-                    MySqlDataReader dataReader = cmd.ExecuteReader();
-
-                    //Read the data and store them in the list
-                    while (dataReader.Read())
-                    {
-                        ID = dataReader["id"] + "";
-                        FirstName = dataReader["FirstName"] + "";
-                        oldFirstName = FirstName;
-                        LastName = dataReader["LastName"] + "";
-                        oldLastName = LastName;
-                        FullName = FirstName + " " + LastName;
-                        Email = dataReader["Email"] + "";
-                        oldEmail = Email;
-                        StudentID = dataReader["StudentID"] + "";
-                        oldStudentID = StudentID;
-                        PhoneNumber = dataReader["PhoneNumber"] + "";
-                        oldPhoneNumber = PhoneNumber;
-                        WantsShirt = !String.IsNullOrEmpty(dataReader["ShirtSize"] + "");
-                        oldWantsShirt = WantsShirt;
-                        ShirtSize = dataReader["ShirtSize"] + "";
-                        oldShirtSize = ShirtSize;
-                    }
-
-                    //close Data Reader
-                    dataReader.Close();
-                    conn.Close();
-                }
-                catch (MySqlException ex)
-                {
-                    throw new Exception(ex.Message);
-                }
-
-            }
 
             public bool Save(){
-              try
+                try
                 {
-                    Member checker = new Member(this.StudentID);
-                    if (ID == null && checker.ID == null)
+                    if (ID == null)
                     {
                         this.Insert();
                         return true;

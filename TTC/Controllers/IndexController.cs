@@ -20,37 +20,21 @@ namespace TTC.Controllers.Index
 
         public String CreateUser(TTC.Models.Index.IndexPageModel model)
         {
-            Database.Member newMember = new Database.Member();
-            if(String.IsNullOrEmpty(model.FullName)){
-                if (String.IsNullOrEmpty(model.FirstName) || String.IsNullOrEmpty(model.LastName)
-                || String.IsNullOrEmpty(model.Email) || String.IsNullOrEmpty(model.ID) || String.IsNullOrEmpty(model.PhoneNumber))
-                {
+            if (String.IsNullOrEmpty(model.FirstName) || String.IsNullOrEmpty(model.LastName)
+            || String.IsNullOrEmpty(model.Email) || String.IsNullOrEmpty(model.ID) || String.IsNullOrEmpty(model.PhoneNumber))
+            {
                
-                    return "Not all values are filled";
-                }
-
-                newMember.FirstName = model.FirstName;
-                newMember.LastName = model.LastName;
-                newMember.Email = model.Email;
-                newMember.PhoneNumber = model.PhoneNumber;
-                newMember.StudentID = model.ID;
-                newMember.ShirtSize = model.ShirtSize + "";
-            }else {
-                if (String.IsNullOrEmpty(model.FullName)
-                || String.IsNullOrEmpty(model.Email) || String.IsNullOrEmpty(model.ID))
-                {
-               
-                    return "Not all values are filled";
-                }
-
-                newMember.FirstName = model.FullName.Substring(0, model.FullName.IndexOf(' '));
-                newMember.LastName = model.FullName.Substring(model.FullName.IndexOf(' '), model.FullName.Length - model.FullName.IndexOf(' '));
-                newMember.Email = model.Email;
-                newMember.PhoneNumber = model.PhoneNumber;
-                newMember.StudentID = model.ID;
-                newMember.ShirtSize = model.ShirtSize + "";
-
+                return "Not all values are filled";
             }
+            MySqlConnection conn = new MySqlConnection();
+            conn.ConnectionString = "Server=127.0.0.1;Database=ttc_database;Uid=root;Pwd=dontfearthereaper";
+            Database.Member newMember = new Database.Member(conn);
+            newMember.FirstName = model.FirstName;
+            newMember.LastName = model.LastName;
+            newMember.Email = model.Email;
+            newMember.PhoneNumber = model.PhoneNumber;
+            newMember.StudentID = model.ID;
+            newMember.ShirtSize = model.ShirtSize + "";
             try
             {
                 newMember.Save();
