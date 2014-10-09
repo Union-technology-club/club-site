@@ -1,62 +1,124 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>T.T.C.</title>
-		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-		<script src="scripts/jquery.sidr.min.js"></script>
-		<script type="text/javascript" src="scripts/js.js"></script>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body>
-	<div id="container">
-		<div id="header">
-			<h1>Technology & Tabletop Club</h1>
-		</div>
-		<div id="contentContainer">
-			<div id="home">
-				<h2>Home</h2>
-				<section>
-				</section>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The offical website for the technology and tabletop club at Union College.">
+
+    <title>Home &ndash; TechTc</title>
+    <link rel="icon" type="image/png" href="images/ttc-favicon.png" />
+    <link rel="stylesheet" href="css/pure-min.css">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!--[if lte IE 8]>
+        <link rel="stylesheet" href="css/layouts/side-menu-old-ie.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+        <link rel="stylesheet" href="css/layouts/side-menu.css">
+    <!--<![endif]-->
+
+    <link rel="stylesheet" href="css/main.css">    
+</head>
+<body>
+<div id="layout">
+    <!-- Menu toggle -->
+    <a href="#menu" id="menuLink" class="menu-link">
+        <!-- Hamburger icon -->
+        <span></span>
+    </a>
+
+    <div id="menu">
+        <div class="pure-menu pure-menu-open">
+            <a data-scroll class="pure-menu-heading" href="#main">TECHTC</a>
+
+            <ul>
+                <li class="menu-item-divided"><a data-scroll href="#main">Home</a></li>
+                <li><a data-scroll href="#about">About</a></li>
+
+                <li class="menu-item-divided ">
+                    <a data-scroll href="#events">Events</a>
+                </li>
+
+                <li><a data-scroll href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="header">
+            <h1>Technology &amp; Tabletop Club</h1>
+            <h2>Power Up</h2>
+        </div>
+
+        <div class="content">
+            <img class="pure-img-responsive logo" src="images/ttc-logo.png"/>
+
+            <h2 class="content-subhead">Who We Are</h2>
+            <div id="about" class="icons pure-g">
+				<div class="icon-div pure-u-sm-1 pure-u-md-1-3">
+					<i class="fa fa-code"></i>
+					<h1>programmers</h1>
+				</div>
+				<div class="icon-div pure-u-sm-1 pure-u-md-1-3">
+					<i class="fa fa-users"></i>
+					<h1>community</h1>
+				</div>
+				<div class="icon-div pure-u-sm-1 pure-u-md-1-3">
+					<i class="fa fa-trophy"></i>
+					<h1>gamers</h1>
+				</div>
 			</div>
-			<div id="about">
-				<h2>About</h2>
-				<section>
-				</section>
-			</div>
-			<div id="signUp">
-				<h2>Join Us</h2>
-				<section>
-					<form id="signUpForm" action="" method="post">
-							<label for="name">Full Name:<input id="name" type="text" name="name" placeholder="Enter Your Full Name" required autofocus></label>
-							<label for="email">Email:<input id="email" type="email" name="memberemail" placeholder="Enter Your Email Address"></label>
-							<label for="unionid">Union ID:<input id="unionid" type="number" name="unionid" placeholder=" xxxxxx" required></label>
-					
-							<p>Select "Yes" to put on one of our snazzy club shirts</p>
-							<ul>
-								<li> <input name="clubshirt" type="radio"> <label>Yes</label></li>
-								<li> <input name="clubshirt" type="radio"> <label>No</label></li>
-							</ul>
-							<div id="tshirt">
-								<ul>
-									<li> <input name="shirtsize" type="radio"> <label>Small</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>Medium</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>Large</label></li>
-									<li> <input name="shirtsize" type="radio"> <label>X-Large</label></li>
-								</ul>
-							</div>
-							<input type="submit" value="Join">
-							<p>We Welcome You with a grin and a nod!</p>
-					</form>
-				</section>
-			</div>
-			<div id="calendar">
-				<h2>Calendar</h2>
-				<section>
-				</section>
-			</div>
-		</div>
-		<div id="footer">
-		</div>
-	</div>
-	</body>
+
+            <!--<div class="pure-g">
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="//farm3.staticflickr.com/2875/9069037713_1752f5daeb.jpg" alt="Peyto Lake">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="//farm3.staticflickr.com/2813/9069585985_80da8db54f.jpg" alt="Train">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="//farm6.staticflickr.com/5456/9121446012_c1640e42d0.jpg" alt="T-Shirt Store">
+                </div>
+                <div class="pure-u-1-4">
+                    <img class="pure-img-responsive" src="//farm8.staticflickr.com/7357/9086701425_fda3024927.jpg" alt="Mountain">
+                </div>
+            </div>-->
+
+            <h2 id="events" class="content-subhead">Event Calendar</h2>
+            <p>
+                A nice pretty calendar will go here. However, we currently are deciding what the best way will be to set it up. So instead, have a nice 
+                random button.
+            </p>
+            <button class="pure-button">Click Me</button>
+        </div>
+        <div id="contact" class="footer">
+            <div class="content">
+                <h2>Contact Us</h2>
+                <p>Got an idea to improve our club? Drop us a line below. Be warned, for now, only known club member e-mails e-mails will make the cut.</p>
+                <form class="pure-form pure-form-aligned">
+                    <fieldset>
+                        <div class="pure-control-group">
+                            <label for="email">E-mail Address: </label>
+                            <input name="email" type="text" class="pure-input " placeholder="e-mail" required>
+                        </div>
+                        <div class="pure-control-group">
+                            <label for="message">Message: </label>
+                            <textarea name="message" type="textbox" class="pure-input pure-input-2-3" style="width: 77%;" placeholder="Tell us what you think. Should we be more awesome, think we are trying to hard?" required></textarea>
+                            
+                        </div>
+                        
+                        <button type="submit" class="pure-button submit">Hit Us Up</button>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/ui.js"></script>
+<script src="scripts/dist/js/bind-polyfill.js"></script>
+<script src="scripts/dist/js/smooth-scroll.js"></script>
+<script>
+    smoothScroll.init();
+</script>
+</body>
 </html>

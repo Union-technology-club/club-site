@@ -1,0 +1,64 @@
+body {
+    font-family: "roboto",sans-serif;
+}
+#menu {
+    box-shadow: 0 -.2em 1em #000;
+}
+.menu-logo {
+    display: inline-block;
+}
+.header {
+    background-color: #1F8DD6;
+}
+.header h1 {
+    color: white;
+}
+.logo {
+	display: block;
+	margin-top: 5em;
+	margin-left: auto;
+	margin-right: auto;
+}
+#contact {
+    padding-top: 1em;
+    /*background-color: #1F8DD6;*/
+    background-color: rgba(0, 116, 87, 1);
+    color: white;
+}
+#contact .content {
+    margin-bottom: 0px;
+}
+.submit {
+    background-color: rgba(249, 249, 249, 1);
+    font-size: 150%;
+    display:block;
+    margin-left: auto;
+}
+
+/* Icon things */
+.icons {
+    text-align:center;
+}
+.icons div {
+    display: inline-block;
+    text-align: center;
+    letter-spacing: 0em;
+    
+	margin-left: auto;
+	margin-right: auto;
+}
+.fa-code {
+    color: #B41D1D;
+    font-size: 10em;
+    padding: 0.27em;
+}
+.fa-users {
+    color: #4580B8;
+    font-size: 10em;
+    padding: 0.27em;
+}
+.fa-trophy {
+    color: #C2B62A;
+    font-size: 10em;
+    padding: 0.27em;
+}
