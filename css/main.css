@@ -8,9 +8,13 @@ body {
     display: inline-block;
 }
 .header {
-    background-color: #1F8DD6;
+    /*background-color: #1F8DD6;*/
+    background-color: rgb(76, 239, 103);
 }
 .header h1 {
+    /*color: white;*/
+}
+.header .subtext {
     color: white;
 }
 .logo {
